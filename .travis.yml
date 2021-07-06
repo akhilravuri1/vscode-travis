@@ -1,0 +1,13 @@
+language: go
+
+os:
+  - linux
+
+go:
+    - "1.12"
+
+before_install:
+    - wget -O vscode.tar https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive
+    - tar -xvzf vscode.tar
+script:
+    - go run electron.go
